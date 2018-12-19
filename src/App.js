@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import NavBar from "./components/navbar";
-import Products from "./components/products";
-import Posts from "./components/posts";
-import Home from "./components/home";
-import Dashboard from "./components/admin/dashboard";
-import ProductDetails from "./components/productDetails";
-import NotFound from "./components/notFound";
+import NavBar from "./components/Navbar";
+import Products from "./components/Products";
+import Posts from "./components/Posts";
+import Home from "./components/Home";
+import Dashboard from "./components/admin/Dashboard";
+import ProductDetails from "./components/ProductDetails";
+import NotFound from "./components/NotFound";
 import "./App.css";
 
 class App extends Component {
@@ -22,6 +22,7 @@ class App extends Component {
               render={props => <Products sortBy="newest" {...props} />}
             />
             <Route path="/posts/:year?/:month?" component={Posts} />
+
             <Route path="/admin" component={Dashboard} />
             <Redirect from="/messages" to="/posts" />
             <Route path="/not-found" component={NotFound} />
